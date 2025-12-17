@@ -1,0 +1,17 @@
+
+services:
+  subconverter:
+    image: tindy2013/subconverter:latest
+    container_name: subconverter
+    restart: always
+    ports:
+      - "25500:25500"
+    volumes:
+      - ./fduzs_config.ini:/base/config/fduzs_config.ini
+
+  sub-web:
+    image: souleastforest/sub-web:latest # 请在本地构建并推送到此镜像名，或在此修改为您构建好的镜像名
+    container_name: sub-web
+    restart: always
+    ports:
+      - "25501:80"
