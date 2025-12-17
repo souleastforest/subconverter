@@ -1,5 +1,5 @@
 window.config = {
-    defaultBackend: 'http://12.107.29.194:25500/sub?',
+    defaultBackend: 'http://14.103.157.163:25500/sub?',
     remoteConfig: [
         {
             label: "FDUZS本地配置",
@@ -13,7 +13,7 @@ window.config = {
     backendOptions: [
         {
             label: "当前服务器后端",
-            value: "http://12.107.29.194:25500/sub?"
+            value: "http://14.103.157.163:25500/sub?"
         },
         {
             label: "subconverter.herokuapp.com",
