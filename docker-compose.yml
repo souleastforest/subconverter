@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  subconverter:
+    image: metacubex/subconverter:latest
+    container_name: subconverter
+    restart: always
+    ports:
+      - "25500:25500"
+
+  sub-web:
+    image: youshandefeiyang/sub-web-modify:latest
+    container_name: sub-web
+    restart: always
+    ports:
+      - "25501:80"
+    environment:
+      - BACKEND_URL=http://localhost:25500
