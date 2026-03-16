@@ -9,7 +9,7 @@ services:
       - "25500:25500"
 
   sub-web:
-    image: youshandefeiyang/sub-web-modify:latest
+    build: ./sub-web
     container_name: sub-web
     restart: always
     ports:
