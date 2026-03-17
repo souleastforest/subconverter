@@ -52,3 +52,12 @@ The project includes a unified `docker-compose.yml` to run both services.
    yarn serve
    ```
 2. The local dev server will typically run on `http://localhost:8080`.
+
+## Troubleshooting & Tips
+
+### Quantumult X "Response Invalid"
+If you encounter `response invalid` when updating subscriptions in Quantumult X:
+- **Cause**: QuanX usually expects a **Node List** only when imported as an external resource. If Subconverter returns a full configuration (default), it may fail.
+- **Solution**: 
+  - Ensure **"Only Output Node Info"** (仅输出节点信息) is checked in the Sub-web interface.
+  - Or manually append `&list=true` to your generated subscription URL.
